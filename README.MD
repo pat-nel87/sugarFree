@@ -11,7 +11,6 @@ to functional over the next few weeks.
 
 ### Features to develop! 
 - ~~Login / user registration~~
-- rendering user analytics in a table view
 - rendering user analytics in user defined graphs
-- storing graphs as image files in the DB.
+
  
