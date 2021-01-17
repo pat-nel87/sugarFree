@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome {{user}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  </head>
+  <body class = "has-background-success">
+    <nav class="navbar is-warning" role="navigation" aria-label="main-navigation">
+
+        <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+           Views
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+           New Entries
+          </a>
+          <a class="navbar-item">
+            My Journal
+          </a>
+          <a class="navbar-item">
+            Lists / Graphs
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log out
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </nav>
+    <div class="container is-fluid">
+  <div class="notification is-dark">
+    <div class="chart-container" style="position: relative; height: 40%; width:100%">
+    <canvas id="myChart1"></canvas>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+      <script>
+        var ctx = document.getElementById('myChart1').getContext('2d');
+        var chart = new Chart(ctx, {
+          // The type of chart we want to create
+          type: 'line',
+
+          // The data for our dataset
+          data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+              label: 'My First dataset',
+              // backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: [0, 10, 5, 2, 20, 30, 45]
+            }]
+          },
+
+          // Configuration options go here
+          options: {}
+        });
+      </script>
+
+  </div>
+</div>
+<div class="container is-fluid">
+<div class="notification is-danger">
+
+<p>Testing</p>
+<p>Testing</p>
+<p>Testing</p>
+
+
+</div>
+</div>
+<div class="container is-fluid">
+
+<div class="columns">
+  <div class="column">
+    <div class="notification is-info">
+    First column
+  </div>
+  </div>
+  <div class="column">
+    <div class="notification is-warning">
+    Second column
+  </div>
+</div>
+  <div class="column">
+    <div class="notification is-dark">
+    Third column
+  </div>
+  </div>
+  <div class="column">
+    <div class="notification is-link">
+    Fourth column
+  </div>
+  </div>
+</div>
+</div>
+  </body>
+</html>

@@ -28,5 +28,6 @@ class UserCreateForm(UserCreationForm):
         if commit:
             user.save()
         return user
-
+# returns a user with cleaned email, first_name, last_name
+# pretty sure I still need to deal with the password?
 

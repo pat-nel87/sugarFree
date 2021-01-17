@@ -19,8 +19,8 @@ def register(request):
       user = form2.save(commit=False) 
       user.save() 
       print(form2.errors)
-    
-    return render(request, "original.html", {"form2":form2})
+   
+      return render(request, "original.html", {"form2":form2})
 
 def log_on(request):
     
@@ -30,9 +30,9 @@ def log_on(request):
     
     if user is not None:
         login(request, user)
-        return HttpResponse(f"{user}")
+        return redirect('dashview')
     else:
-        return redirect('index')
+        return HttpResponse("invalid")
 
 def log_out(request):
     

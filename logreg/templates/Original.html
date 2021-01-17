@@ -3,8 +3,8 @@
   <meta charset ="utf-8">
   <title> Sugar_Free login / registration </title>
   <body>
-    
-      <form class="" action="/logreg/register/" method="post">
+
+      <form class="" action="register" method="post">
         {% csrf_token %}
         {{ form2.as_p }}
         <!--  ".as_p" is an example of an option you can attach to the form inputs
