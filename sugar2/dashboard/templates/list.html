@@ -1,0 +1,57 @@
+<table>
+    <thead>
+        <tr>
+            <th>Glucose Readings</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user_reading in user_reading %}
+            <tr>
+
+                    <td>{{user_reading.reading}}</td>
+                    <!--<td><input type="hidden" name="price" value="{{product.price}}">{{product.price}}</td>-->
+
+              
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Insulin Dosages</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user_dose in user_dose %}
+                <tr>
+
+                        <td>{{user_dose.dose}}</td>                      <!--<td><input type="hidden" name="price" value="{{product.price}}">{{product.price}}</td>-->
+
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Macronutrient Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user_macro in user_macro %}
+                    <tr>
+
+                            <td>{{user_macro.fat}}</td>
+                            <td>{{user_macro.carb}}</td>
+                            <td>{{user_macro.protein}}</td>
+                            <!--<td><input type="hidden" name="price" value="{{product.price}}">{{product.price}}</td>-->
+
+
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
