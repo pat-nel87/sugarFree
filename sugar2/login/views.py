@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect, HttpResponse
 def index(request):
     form = AuthenticationForm
      
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'login1.html', {'form': form})
 
 def register(request):
     if request.method == 'POST':
@@ -16,10 +16,10 @@ def register(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return HttpResponse(f'{user} {form}')
+            return redirect("/dashview")
     else:
         form = UserCreationForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'signup2.html', {'form': form})
 
 def log_on(request): 
     username = request.POST['username']
