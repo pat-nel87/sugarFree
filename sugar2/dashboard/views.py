@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from .models import Glucose, Insulin, Macro
+
 import itertools
 import matplotlib
 import matplotlib.pyplot as plt 

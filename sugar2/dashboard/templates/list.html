@@ -34,15 +34,15 @@
     </div>
   </nav>
 
-<table class = "table-success">
+<table class = "table table-warning table-striped table-bordered table-hover">
     <thead>
-        <tr class="table-success">
-            <th class="table-success">Blood Glucose (mg/dl)</th>
-            <th class="table-success"> Time </th>
+        <tr>
+            <th scope="col">Blood Glucose (mg/dl)</th>
+            <th scope="col"> Time </th>
           </tr>
 
         </thead>
-        <tbody class="table-success">
+        <tbody>
             {% for user_reading in user_reading %}
             <tr>
 
@@ -54,11 +54,11 @@
             {% endfor %}
         </tbody>
     </table>
-    <table class = "table-success">
+    <table class = "table table-warning table-striped table-bordered table-hover">
         <thead>
             <tr>
-                <th>Insulin Dose</th>
-                <th>Time</th>
+                <th scope = "col">Insulin Dose</th>
+                <th scope = "col">Time</th>
                 </tr>
             </thead>
             <tbody>
@@ -73,13 +73,13 @@
                 {% endfor %}
             </tbody>
         </table>
-        <table class = "table-success">
+        <table class = "table table-warning table-striped table-bordered table-hover">
             <thead>
                 <tr>
-                    <th> Fat (g) </th>
-                    <th> Carb (g) </th>
-                    <th> Protein (g)</th>
-                    <th> Time </th>
+                    <th scope = "col"> Fat (g) </th>
+                    <th scope = "col"> Carb (g) </th>
+                    <th scope = "col"> Protein (g)</th>
+                    <th scope = "col"> Time </th>
                     </tr>
                 </thead>
                 <tbody>
