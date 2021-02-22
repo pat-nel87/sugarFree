@@ -28,8 +28,6 @@ parameters.
 	At present, this is a personal pet project to further develop 
 my python and django knowledge. 
 
-### Features to develop! 
-- ~~Login / user registration~~
-- ~~rendering user analytics in user defined graphs
+
 
  
