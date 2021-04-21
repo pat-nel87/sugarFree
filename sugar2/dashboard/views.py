@@ -5,9 +5,10 @@ from .models import Glucose, Insulin, Macro
 
 import itertools
 import matplotlib
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 from io import StringIO
 
+import json
 #import numpy as np
 
 
@@ -70,6 +71,8 @@ def gluco_entry(request):
     new_entry = Glucose.objects.create(reading=reading,time=time,uploaded_by=user)
     new_entry.save()
     print(f"{reading} {time}")
+    jsonEntry = json.dumps([reading , time])
+    print(jsonEntry)
     #return HttpResponse(f"{new_entry} {new_entry.uploaded_by}")
     return redirect('dashview')
        
