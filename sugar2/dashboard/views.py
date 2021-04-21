@@ -71,11 +71,17 @@ def gluco_entry(request):
     new_entry = Glucose.objects.create(reading=reading,time=time,uploaded_by=user)
     new_entry.save()
     print(f"{reading} {time}")
+    
+    #Unable to get user object as a whole to serialize to json, maybe try
+    # User.name and another identifier
+    # 
     jsonEntry = json.dumps([reading , time])
     print(jsonEntry)
     #return HttpResponse(f"{new_entry} {new_entry.uploaded_by}")
     return redirect('dashview')
-       
+ 
+# Would like to get rid of the matplot
+# and switchover to javascript graphs   
 def return_graph(user):
     user = user 
     val1 = list(user.user_reading.values_list('reading').order_by('time'))
