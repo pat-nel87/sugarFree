@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# Next to do is to create serializers
+# that mimic the classes for conversion
+# to json for new js graphs
+
 class Glucose(models.Model):
     reading = models.IntegerField()
     time = models.DateTimeField(auto_now_add=False)
